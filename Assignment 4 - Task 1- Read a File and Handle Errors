@@ -1,0 +1,8 @@
+try:
+    File1=input('Give file name: ')
+    myfile = open(File1, 'r')
+    for line in myfile:
+        print(line.strip())
+    myfile.close()
+except FileNotFoundError:
+    print('Error: The', File1, 'file was not found')
